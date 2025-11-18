@@ -46,7 +46,7 @@ class CreateBaseCurrenciesCommand extends Command
      * @throws ServiceCircularReferenceException
      * @throws ServiceNotFoundException
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $totalCount = 0;
 
@@ -58,5 +58,7 @@ class CreateBaseCurrenciesCommand extends Command
         }
 
         $output->writeln(sprintf('%s currencies created.', $totalCount));
+
+        return Command::SUCCESS;
     }
 }

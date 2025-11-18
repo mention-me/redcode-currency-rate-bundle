@@ -50,7 +50,7 @@ class LoadCurrencyRatesCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $providerName = $input->getArgument('providerName');
 
@@ -61,6 +61,8 @@ class LoadCurrencyRatesCommand extends Command
         foreach ($rates as $rate) {
             $output->writeln(sprintf('%s. Loaded rate for %s', $rate->getProviderName(), $rate->getCurrency()->getCode()));
         }
+
+        return Command::SUCCESS;
     }
 
     /**

@@ -33,9 +33,4 @@ class RedCodeCurrencyRateExtension extends Extension
             $loader->load('twig.xml');
         }
     }
-
-    public function getNamespace()
-    {
-        return 'redcode_currency_rate';
-    }
 }
