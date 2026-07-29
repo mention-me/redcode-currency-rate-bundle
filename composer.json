@@ -14,14 +14,15 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.4",
-        "doctrine/orm": "^2",
-        "doctrine/dbal": "^2",
+        "php": "^8.1",
+        "doctrine/orm": "^2.14",
+        "doctrine/dbal": "^2.13|^3.0",
         "redcode/currency-rate": "0.2.*",
-        "symfony/symfony": "^4.4"
+        "symfony/symfony": "^5.4|^6.4"
     },
 	"require-dev": {
-	  "fabpot/php-cs-fixer": "*"
+	  "fabpot/php-cs-fixer": "*",
+	  "phpunit/phpunit": "^9.5"
 	},
     "autoload": {
         "psr-4": {
